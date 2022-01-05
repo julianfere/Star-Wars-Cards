@@ -5,7 +5,7 @@ export default function People() {
   const [people, setPeople] = useState([]);
 
   const getPeople = async () => {
-    let data = await fetchApi("people")
+    let data = await fetchApi("/all.json")
     setPeople(data)
   };
 
@@ -13,7 +13,7 @@ export default function People() {
     getPeople();
   }, []);
 
-  const peopleList = people.map((person,id) => {{return <PersonItem key={id+1} id={id+1} person={person} />}})
+  const peopleList = people.map((person,id) => {{return <PersonItem key={id+1} person={person} />}})
 
   return (
     <>
