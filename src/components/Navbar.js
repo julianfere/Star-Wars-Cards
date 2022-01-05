@@ -4,7 +4,7 @@ import  { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav>
-      <Link to="/home">
+      <Link to="/">
         <img src={img} alt="Star Wars Logo" className="nav-logo" />
       </Link>
       <ul className="nav-links">

@@ -4,6 +4,7 @@
   --body-bg: #1C1E22;
   --nav-bg: #0c0c0e;
   --gold-color: #FEC440;
+  --card-bg: #5f5e5e;
 }
 
 * {
@@ -48,6 +49,7 @@ nav {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
+  border-bottom: 2px solid var(--nav-bg);
 }
 
 .card-container {
@@ -55,7 +57,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -92,24 +94,51 @@ nav {
 
 
 .card {
-  background:#5f5e5e;
+  background:var(--card-bg);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  width: 15rem;
-  height: 4rem;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
+}
+
+.card > img {
+  width: 10rem;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  object-position: top;
+  height: 12rem;
 }
 
 .card-link {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+  border-bottom: 2px solid var(--card-bg);
 }
 
 a:hover {
   color: var(--gold-color);
   transition: 0.3s;
   border-bottom: 2px solid var(--gold-color);
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }
