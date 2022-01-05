@@ -16,7 +16,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/" element={<Layout />}>
           <Route path="films"     element={<Films />} />
           <Route path="people"    element={<People />} />
